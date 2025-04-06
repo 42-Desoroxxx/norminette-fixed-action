@@ -6,7 +6,7 @@ COPY pyproject.toml poetry.lock ./
 
 RUN pip3 install setuptools poetry \
     && poetry config virtualenvs.create false \
-    && poetry install --only main
+    && poetry install --only main --no-root
 
 COPY . .
 
